@@ -396,6 +396,9 @@ node = {
         return r.balance;
       });
     },
+    getStorage: function (tz1) {
+      return node.query("/blocks/head/proto/context/contracts/" + tz1 + "/storage");
+    },
     getDelegate: function (tz1) {
       return node.query("/blocks/head/proto/context/contracts/" + tz1 + "/delegate");
     },
