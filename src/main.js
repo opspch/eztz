@@ -405,6 +405,10 @@ node = {
     getHead: function () {
       return node.query("/blocks/head");
     },
+    getHeadHash: function () {
+      return node.query("/blocks/head/hash")
+      .then(r => r.hash);
+    },
     call: function (e, d) {
       return node.query(e, d);
     },
